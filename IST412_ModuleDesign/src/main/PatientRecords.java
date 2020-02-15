@@ -25,4 +25,17 @@ public class PatientRecords {
         return records;
     }
     
+    /**
+     * 
+     * @param records Patient chart normally gained from getRecord(). In JSON form.
+     * @return Appropriately processed JSON.
+     */
+    public ArrayList parseRecords(ArrayList records){
+        while(records.size() > 0){
+            records = records;  //filler for breaking down the code however we see fit
+        }
+        
+        return records;
+    }
+    
 }
