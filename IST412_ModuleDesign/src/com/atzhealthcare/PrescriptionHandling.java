@@ -50,4 +50,19 @@ public class PrescriptionHandling {
         databaseResults = databaseResults;  //take whatever is needed.  May need to be multiple separate functions
         return databaseResults;
     }
+    
+    
+    
+    /**
+     * Adds to state database if medication is special one, and adds the medication to the patient records. 
+     * @param meds Medication to be added.
+     * @param ID Patient ID.
+     */
+    public void addPrescription(String meds, Integer ID){
+        if (restrictedMedications.contains(meds)){
+            //add record of this to medical database from before if medication is one that needs to be monitored
+        }
+        //PatientRecords.addRX(ID, meds);     //I know this is not right but I'm waiting for the file structure to be finalized
+        
+    }
 }
