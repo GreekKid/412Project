@@ -6,7 +6,9 @@
 package com.atzhealthcare.controllers;
 
 import com.atzhealthcare.models.Appointment;
+import com.atzhealthcare.models.InsuranceInvoice;
 import com.atzhealthcare.models.Invoice;
+import com.atzhealthcare.models.PatientInvoice;
 
 /**
  *
@@ -16,11 +18,20 @@ public class PaymentController {
     
     /**
      * @param appt Appointment object containing data on which to base the invoice on
-     * @return Invoice object containing total bill
+     * @return PatientInvoice object containing patient's bill
      */
-    public Invoice generateInvoice(Appointment appt){
-        Invoice invoice = new Invoice();
+    public PatientInvoice generatePatientInvoice(Appointment appt){
+        PatientInvoice patInvoice = new PatientInvoice();
         //add logic for adding info to invoice here
-        return invoice;
+        return patInvoice;
+    }
+    /**
+     * @param appt Appointment object containing data on which to base the invoice on
+     * @return InsuranceInvoice object containing insurance providers's bill
+     */
+    public InsuranceInvoice generateInsuranceInvoice(Appointment appt){
+        InsuranceInvoice insuranceInvoice = new InsuranceInvoice();
+        //add logic for adding info to invoice here
+        return insuranceInvoice;
     }
 }
