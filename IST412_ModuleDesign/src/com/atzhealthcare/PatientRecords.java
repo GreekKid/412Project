@@ -26,7 +26,7 @@ public class PatientRecords {
     }
     
     /**
-     * 
+     * Translates the records into a human-readable format.
      * @param records Patient chart normally gained from getRecord(). In JSON form.
      * @return Appropriately processed JSON.
      */
@@ -40,7 +40,7 @@ public class PatientRecords {
     
     
     /**
-     * 
+     * Adds prescription to patient records.
      * @param ID Patient ID
      * @param prescription Prescription medication being added to patient's record.
      */
