@@ -38,4 +38,13 @@ public class PatientRecords {
         return records;
     }
     
+    
+    /**
+     * 
+     * @param ID Patient ID
+     * @param prescription Prescription medication being added to patient's record.
+     */
+    public void addRX(Integer ID, String prescription){
+        //add prescription to patient's records in the DB
+    }
 }
