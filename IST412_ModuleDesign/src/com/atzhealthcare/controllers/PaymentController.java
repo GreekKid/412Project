@@ -2,42 +2,10 @@ package com.atzhealthcare.controllers;
 
 import com.atzhealthcare.models.Appointment;
 import com.atzhealthcare.models.CardInfo;
-import com.atzhealthcare.models.InsuranceInvoice;
 import com.atzhealthcare.models.Invoice;
-import com.atzhealthcare.models.PatientInvoice;
 import com.atzhealthcare.models.Receipt;
 
 public class PaymentController {
-    
-    /**
-     * @param appt id to locate record in database containing data on which to base the invoice
-     * @return PatientInvoice object containing patient's bill
-     */
-    public PatientInvoice generatePatientInvoice(String appt){
-        PatientInvoice patInvoice = new PatientInvoice();
-        //add logic for adding info to invoice here
-        return patInvoice;
-    }
-    /**
-     * @param appt id to locate record in database containing data on which to base the invoice
-     * @return InsuranceInvoice object containing insurance providers's bill
-     */
-    public InsuranceInvoice generateInsuranceInvoice(String appt){
-        InsuranceInvoice insuranceInvoice = new InsuranceInvoice();
-        //add logic for adding info to invoice here
-        return insuranceInvoice;
-    }
-    
-    /**
-     *
-     * @param pat PatientInvoice object containing patient's bill
-     * @param insur InsuranceInvoice object containing provider's bill
-     * @return Invoice object, a newly formatted combined bill
-     */
-    public Invoice generateTotalInvoice(PatientInvoice pat, InsuranceInvoice insur){
-        Invoice invoice = new Invoice(pat, insur);
-        return invoice;
-    }
     
     /**
      * Interacts with external API to process card payments
@@ -63,7 +31,7 @@ public class PaymentController {
      * @param apptID String passed from the front end to identify a specific stored appointment object
      * @return Receipt object containing data for the front end to render a new receipt document
      */
-    public Receipt generateReceipt(String apptID){
+    private Receipt generateReceipt(String apptID){
         //look up appointment in db based on id. 
         Appointment appointment = new Appointment();
         Invoice invoice = new Invoice();
