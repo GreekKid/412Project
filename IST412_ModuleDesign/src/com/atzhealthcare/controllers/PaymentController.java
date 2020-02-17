@@ -10,9 +10,11 @@ public class PaymentController {
     /**
      * Interacts with external API to process card payments
      * @param cc CardInfo object containing payor information read from the patient's card
-     * @return ResponseEntity to signify that the payment was successful upon completion
+     * @param apptID String passed from the front end to identify a specific stored appointment object
+     * @param shouldGenerateReceipt flag to determine if generateRecipt method is called
+     * @return ResponseEntity to signify that the payment was successful upon completion, also holds Receipt object if present
      */
-    public ResponseEntity<Void> payBill(CardInfo cc){
+    public ResponseEntity<Void> payBill(CardInfo cc, String apptID, boolean shouldGenerateReceipt){
         //communicate with API, sending card details
         return ResponseEntity.ok();
     }
@@ -20,9 +22,11 @@ public class PaymentController {
     /**
      * Interacts with Bank's API to transfer funds via direct deposit
      * @param bankInfo customer's entered banking info
-     * @return ResponseEnity detailing if transaction was successful
+     * @param apptID String passed from the front end to identify a specific stored appointment object
+     * @param shouldGenerateReceipt flag to determine if generateRecipt method is called
+     * @return ResponseEnity detailing if transaction was successful, also holds Receipt object if present
      */
-    public ResponseEntity<Void> transferFunds(BankInfo bankInfo){
+    public ResponseEntity<Void> transferFunds(BankInfo bankInfo, String apptID, boolean shouldGenerateReceipt){
         //communicate with API, sending bank details
         return ResponseEntity.ok();
     }
