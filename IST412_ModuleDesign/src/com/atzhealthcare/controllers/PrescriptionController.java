@@ -13,10 +13,10 @@ import java.util.List;
  *
  * @author reedm
  */
-public class PrescriptionHandling {
+public class PrescriptionController {
     private final List<String> restrictedMedications;
 
-    public PrescriptionHandling() {
+    public PrescriptionController() {
         this.restrictedMedications = Arrays.asList("Adderall", "Oxy", "Something Else");
     }
     

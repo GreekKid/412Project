@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author reedm
  */
-public class PatientRecords {
+public class PatientRecordController {
     
     /**
      * Takes in patient ID number, and returns patient chart as a JSON array to be parsed
