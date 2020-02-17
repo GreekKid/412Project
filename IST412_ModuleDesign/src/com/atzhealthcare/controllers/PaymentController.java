@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.atzhealthcare.controllers;
 
 import com.atzhealthcare.models.Appointment;
@@ -12,10 +7,6 @@ import com.atzhealthcare.models.Invoice;
 import com.atzhealthcare.models.PatientInvoice;
 import com.atzhealthcare.models.Receipt;
 
-/**
- *
- * @author roscoeturner
- */
 public class PaymentController {
     
     /**
