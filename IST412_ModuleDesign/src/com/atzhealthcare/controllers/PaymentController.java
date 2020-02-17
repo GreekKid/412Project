@@ -31,7 +31,7 @@ public class PaymentController {
         return ResponseEntity.ok();
     }
     /**
-     * generates a receipt based on information pulled from the appointment database
+     * Generates a receipt based on information pulled from the appointment database
      * @param apptID String passed from the front end to identify a specific stored appointment object
      * @return Receipt object containing data for the front end to render a new receipt document
      */
